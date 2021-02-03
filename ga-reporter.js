@@ -1,4 +1,4 @@
-const ga_measurement_id = 'UA-188835275';  //v4:   'G-47KP9JTKFX'
+const ga_measurement_id = 'UA-188835274-1';  //v4:   'G-47KP9JTKFX'
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
