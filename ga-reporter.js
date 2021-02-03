@@ -1,7 +1,11 @@
-function reportPageVisited() {
-  console.log("page visited");
+function reportPageLoaded() {
+  console.log("page loaded");
 }
 
 function linkClicked() {
   console.log("link clicked");
 }
+
+window.addEventListener('load', (event) => {
+    reportPageLoaded();
+});
