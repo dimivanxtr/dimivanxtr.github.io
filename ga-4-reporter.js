@@ -1,7 +1,7 @@
 const ga_4_measurement_id = 'G-47KP9JTKFX';
 
 let dataLayer = [{
-  'pageCategory': 'signup',
+  'pageCategory': 'StartPage',
   'visitorType': 'high-value'
 }];
 
@@ -11,15 +11,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer', ga_4_measurement_id);
 
-function reportPageLoaded() {
-  console.log("page loaded");
-}
-
-function linkClicked() {
-  console.log("link clicked");
+const GA4 = {
+  reportPageLoaded: () => {
+    console.log("GA4 page loaded");
+    dataLayer.push({'event': 'startPageViewEvent'});
+  }
+  
+  linkClicked: () => {
+    console.log("GA4 link clicked");
+  }
 }
 
 window.addEventListener('load', (event) => {
-  reportPageLoaded();
-  ga('send', 'pageview');
+  GA4.reportPageLoaded();
 });
