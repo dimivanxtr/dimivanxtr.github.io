@@ -9,9 +9,9 @@ gtag('config', ga4_measurement_id);
 const GA4 = {
   reportEvent() {
     const args = arguments;
-    window.addEventListener('load', (event) => {
+    // window.addEventListener('load', (event) =>
       gtag.apply(null, args);
-    });
+    //});
   }
 };
 
