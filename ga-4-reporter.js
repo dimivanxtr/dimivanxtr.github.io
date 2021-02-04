@@ -8,7 +8,7 @@ gtag('config', ga4_measurement_id);
 
 const GA4 = {
   reportEvent: () => {
-    gtag.apply(null, arguments),
+    gtag.apply(null, arguments);
   },
 };
 
