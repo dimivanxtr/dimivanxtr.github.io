@@ -3,9 +3,10 @@
         <head>
             <script src="ga-ua-reporter.js"></script>
             <script src="ga-4-reporter.js"></script>
+            <script>GA4.reportEvent('event', 'checkout_successful', { method: 'logged_in_user' })</script>
         </head>
     <body style="background-color: lightseagreen;">
-        <script>GA4.reportEvent('event', 'checkout_successful', { method: 'logged_in_user' })</script>
+       
         <h1>Checkout as a user</h1>
 
 
