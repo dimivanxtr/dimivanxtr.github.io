@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-        <head>
-            <script src="ga-ua-reporter.js"></script>
-            <script src="ga-4-reporter.js"></script>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-47KP9JTKFX"></script>
+        <!-- script src="ga-ua-reporter.js"></script -->
+        <script src="ga-4-reporter.js"></script>
     </head>
     
     <body style="background-color: lightcyan;">
@@ -10,9 +11,9 @@
         <h1>Anonymous checkout</h1>
 
 
-        <a href="page2.html">Go to Previous</a>
+        <a href="page2.html" onmouseover="GA4.reportEvent('event', 'hover_page2_link');">Go to Previous</a>
         <br>
-        <a href="page4.html">Checkout</a>
+        <a href="page4.html onmouseover="GA4.reportEvent('event', 'hover_over_checkout');"">Checkout</a>
         <br>
         
     </body>
