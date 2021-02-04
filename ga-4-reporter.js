@@ -15,12 +15,12 @@ const GA4 = {
   reportPageLoaded: () => {
     console.log("GA4 page loaded");
     dataLayer.push({'event': 'startPageViewEvent'});
-  }
+  },
   
   linkClicked: () => {
     console.log("GA4 link clicked");
-  }
-}
+  },
+};
 
 window.addEventListener('load', (event) => {
   GA4.reportPageLoaded();
