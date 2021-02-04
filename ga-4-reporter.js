@@ -7,7 +7,9 @@ gtag('js', new Date());
 gtag('config', ga4_measurement_id);
 
 const GA4 = {
-  reportEvent: gtag,
+  reportEvent: () => {
+    gtag.apply(null, arguments),
+  },
 };
 
 window.addEventListener('load', (event) => {
