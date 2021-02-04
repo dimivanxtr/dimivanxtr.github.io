@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- script src="ga-ua-reporter.js"></script -->
-        <!-- script src="ga-4-reporter.js"></script -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-47KP9JTKFX"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-47KP9JTKFX');
-          gtag('event', 'sign_up', { 'method': 'email' });
-        </script>
+        <!-- script src="ga-ua-reporter.js"></script -->
+        <script src="ga-4-reporter.js"></script>
     </head>
     <body style="background-color: lavenderblush;">
         <h1>Start</h1>
 
-        <a href="page2.html">Go to next page</a>
+        <a href="page2.html" onmouseover="GA4.reportEvent('event', 'hover_page2_link');>Go to next page</a>
     
     </body>
 </html>
