@@ -3,13 +3,13 @@
         <head>
             <script src="ga-ua-reporter.js"></script>
             <script src="ga-4-reporter.js"></script>
-    </head>
+        </head>
     <body style="background-color: lightseagreen;">
-
+        <script>GA4.reportEvent('event', 'checkout_successful', { method: 'logged_in_user' })</script>
         <h1>Checkout as a user</h1>
 
 
-        <a href="page5.html">Back</a>
+        <a href="page5.html" onmouseover="GA4.reportEvent('event', 'hover_over_back_link');">Back</a>
     
     </body>
 </html>
