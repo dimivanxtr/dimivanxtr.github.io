@@ -6,20 +6,21 @@ gtag('js', new Date());
 
 gtag('config', ga4_measurement_id);
 
-const GA4 = {
-  reportEvent() {
-    const args = arguments;
-    
-    if (document.readyState === 'complete') {
-      gtag.apply(null, args);
-    } else {
-      window.addEventListener('load', (event) => {
-        gtag.apply(null, args);
-      });
-    }
+const addWindowLoadListener = (fn) => {
+  if (document.readyState === 'complete') {
+    fn();
+  } else {
+    window.addEventListener('load', (event) => {
+      fn();
+    });
   }
 };
 
-window.addEventListener('load', (event) => {
-  GA4.reportEvent('event', 'start_page_visited');
-});
+const GA4 = {
+  reportEvent() {
+    const args = arguments;    
+    addWindowLoadListener(() => gtag.apply(null, args))
+  }
+};
+
+GA4.reportEvent('event', 'page_visited');
