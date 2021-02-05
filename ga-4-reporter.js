@@ -1,4 +1,4 @@
-const ga4_measurement_id = 'G-47KP9JTKFX';
+const ga4_measurement_id = 'G-9TJ06WQS84';
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
