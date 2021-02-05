@@ -11,10 +11,10 @@ const GA4 = {
     const args = arguments;
     
     if (document.readyState === 'complete') {
-      gtag.apply(args);
+      gtag.apply(null, args);
     } else {
       window.addEventListener('load', (event) => {
-        gtag.apply(args);
+        gtag.apply(null, args);
       });
     }
   }
